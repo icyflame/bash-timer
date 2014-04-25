@@ -22,7 +22,7 @@ echo "Time elapsed:- $t"
 
 # we now have the time in the variable t
 
-echo "$t" >> times.txt
+echo "$t, " >> times.txt
 
 git commit -a -m "Added a time!"
 git push origin master
