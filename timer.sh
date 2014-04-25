@@ -2,6 +2,11 @@ echo
 echo "Cube timer"
 echo
 
+################# query sequence ###############
+
+dim=3
+read -p "What is the dimension of the cube that you are going to solve?(default=3x3)" -n 1 dim
+
 ############# timer sequence #####################
 
 read -p "Enter a key to start timer: " -n 1 -s
@@ -49,7 +54,7 @@ then
 echo -n "$t, " >> times.txt
 
 else
-echo -n "$t[$comment], " >> times.txt
+echo -n "$t[$comment], " >> times$dim.txt
 fi
 
 ################ add and commit sequence #########################
