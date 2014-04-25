@@ -6,6 +6,8 @@ echo
 
 dim=3
 read -p "What is the dimension of the cube that you are going to solve?(default=3x3)" -n 1 dim
+dim=${dim:-3}
+echo "Dimension is $dim"
 
 ############# timer sequence #####################
 
