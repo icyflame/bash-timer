@@ -53,7 +53,7 @@ esac
 if [ "$comment" == "none" ]
 
 then
-echo -n "$t, " >> times.txt
+echo -n "$t, " >> times$dim.txt
 
 else
 echo -n "$t[$comment], " >> "times$dim.txt"
