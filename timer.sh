@@ -56,7 +56,7 @@ then
 echo -n "$t, " >> times.txt
 
 else
-echo -n "$t[$comment], " >> times$dim.txt
+echo -n "$t[$comment], " >> "times$dim.txt"
 fi
 
 ################ add and commit sequence #########################
