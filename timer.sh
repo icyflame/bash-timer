@@ -20,7 +20,7 @@ echo "Time elapsed:- $t"
 echo -n "Do you want to add a comment to this time?(y/N) "
 read -n 1 opt
 
-comment = "none"
+comment="none"
 
 case $opt in
 
