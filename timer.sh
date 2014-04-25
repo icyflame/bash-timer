@@ -7,7 +7,8 @@ echo
 dim=3
 read -p "What is the dimension of the cube that you are going to solve?(default=3x3)" -n 1 dim
 dim=${dim:-3}
-echo "Dimension is $dim"
+echo
+echo "You are solving a 3x3"
 
 ############# timer sequence #####################
 
@@ -37,13 +38,15 @@ case $opt in
 
 "y" | "Y")
 
+echo
 echo "Enter your comment: "
 read comment
-# echo "You entered $comment"
+
 ;;
 
 *)
 
+echo
 echo "You choosed to enter no comment!" ;;
 
 esac
@@ -59,19 +62,16 @@ else
 echo -n "$t[$comment], " >> times$dim.txt
 fi
 
-################ add and commit sequence #########################
-
-git commit -a -m "Added a time!"
-
-
-###################### push sequence #######################
+################ add-commit-push sequence ########################
 
 read -p "Do you want to push all the times currently stored to the server?(y/N): " -n 1 opt
 
 case $opt in
 
 "y" | "Y")
+echo
 echo "We will now enter the push sequence"
+git commit -a -m "Added a time!"
 git push origin master
 ;;
 
